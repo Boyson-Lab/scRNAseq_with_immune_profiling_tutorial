@@ -12,26 +12,28 @@ In recent years, scRNA-seq has revolutionized our understanding of cellular hete
 This tutorial is designed to guide you through the key steps of scRNA-seq data analysis, providing detailed explanations and practical examples along the way. Here's a brief overview of the analysis pipeline:
 
  <p align="center">
-<img src="../img/sc_workflow_2022.jpg" width="600">
+<img src="./img/sc_workflow_2022.jpg" width="600">
 </p>
 
-1. **Introduction to scRNAseq with immune repertoire profiling**: Explore how combining the scRNA-seq technique with immune repertoire profiling can enhance understanding of the diverse immune cell population. Gain knowledge on the technical aspects of scRNA-seq and how to effectively design an experiment to fully utilize this technique.
 
-2. **Generate count matrix from sequence reads**: Learn how to convert raw scRNA-seq sequence reads into a count matrix with a simple step-by-step process. This matrix is essential for analyzing gene expression patterns, cell surface protein expression and TCR repertoire profiling at the single-cell level, using the Seurat R package.
 
-3. **Custom analysis of TCR sequences**: Learn how to transform a TCR VDJ count matrix into a compatible format for merging with gene expression and cell surface protein count matrices in Seurat.
+1. [**Introduction to scRNAseq with immune repertoire profiling**](1_Intro_to_scRNAseq_with_TCR.md): Explore how combining the scRNA-seq technique with immune repertoire profiling can enhance understanding of the diverse immune cell population. Gain knowledge on the technical aspects of scRNA-seq and how to effectively design an experiment to fully utilize this technique.
 
-4. **Filter cells using quality metrics and demultiplex the hashtags**: Discover how to combine the gene expression, TCR, and cell surface protein datasets in Seurat, and filter the data to include only high-quality cells. Additionally, learn how to separate the cells into individual biological/technical replicates by utilizing the hashtag information for the cell surface proteins.
+2. [**Generate count matrix from sequence reads**](/Lessons/2_Reads_to_Count_matrix.md): Learn how to convert raw scRNA-seq sequence reads into a count matrix with a simple step-by-step process. This matrix is essential for analyzing gene expression patterns, cell surface protein expression and TCR repertoire profiling at the single-cell level, using the Seurat R package.
 
-5. **Data normalization and clustering**: Learn the process of normalizing data, determining whether to integrate or not, and creating clusters specific to cell types.
+3. [**Custom analysis of TCR sequences**](/Lessons/3_Custom_TCR_matrix_to_Seurat.md): Learn how to transform a TCR VDJ count matrix into a compatible format for merging with gene expression and cell surface protein count matrices in Seurat.
 
-6. **Cluster identification and gene expression visualization**: Learn how to identify the clusters of cell types by utilizing known marker genes and view the expression of specific individual genes or the combined expression of a group of genes.
+4. [**Filter cells using quality metrics and demultiplex the hashtags**](/Lessons/4_QC_filter_and_demux.md): Discover how to combine the gene expression, TCR, and cell surface protein datasets in Seurat, and filter the data to include only high-quality cells. Additionally, learn how to separate the cells into individual biological/technical replicates by utilizing the hashtag information for the cell surface proteins.
 
-7. **Differential gene expression and pseudo-bulk DGE analysis**: Learn how to conduct differential gene expression (DGE) analysis, which includes pseudo-bulk analysis, to pinpoint genes that display significant differential expression between experimental conditions or cell clusters.
+5. [**Data normalization and clustering**](/Lessons/5_Data_norm_and_clustering.md): Learn the process of normalizing data, determining whether to integrate or not, and creating clusters specific to cell types.
 
-8. **Trajectory analysis**: Learn how to conduct trajectory analysis with the SCANPY PAGA toolkit, which is based on Python.
+6. [**Cluster identification and gene expression visualization**](/Lessons/6_cluster_identification_and_gene_expression.md): Learn how to identify the clusters of cell types by utilizing known marker genes and view the expression of specific individual genes or the combined expression of a group of genes.
 
-9. **Custom analysis of TCR VDJ usage**: Learn how to effectively visualize the usage of TCR γ and δ-chain V-segments, identify the top paired CDR3 clonotypes within the dataset, and create CDRaa spectratype plots.
+7. [**Differential gene expression and pseudo-bulk DGE analysis**](/Lessons/7_Differential_Gene_Expression_analysis.md): Learn how to conduct differential gene expression (DGE) analysis, which includes pseudo-bulk analysis, to pinpoint genes that display significant differential expression between experimental conditions or cell clusters.
+
+8. [**Trajectory analysis**](/Lessons/8_trajectory_analysis.md): Learn how to conduct trajectory analysis with the SCANPY PAGA toolkit, which is based on Python.
+
+9. [**Custom analysis of TCR VDJ usage**](/Lessons/9_TCR_usage_visualization.md): Learn how to effectively visualize the usage of TCR γ and δ-chain V-segments, identify the top paired CDR3 clonotypes within the dataset, and create CDRaa spectratype plots.
 
 
 
