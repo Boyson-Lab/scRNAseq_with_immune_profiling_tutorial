@@ -17,7 +17,7 @@ This tutorial is designed to guide you through the key steps of scRNA-seq data a
 
 
 
-1. [**Introduction to scRNAseq with immune repertoire profiling**](1_Intro_to_scRNAseq_with_TCR.md): Explore how combining the scRNA-seq technique with immune repertoire profiling can enhance understanding of the diverse immune cell population. Gain knowledge on the technical aspects of scRNA-seq and how to effectively design an experiment to fully utilize this technique.
+1. [**Introduction to scRNAseq with immune repertoire profiling**](/Lessons/1_Intro_to_scRNAseq_with_TCR.md): Explore how combining the scRNA-seq technique with immune repertoire profiling can enhance understanding of the diverse immune cell population. Gain knowledge on the technical aspects of scRNA-seq and how to effectively design an experiment to fully utilize this technique.
 
 2. [**Generate count matrix from sequence reads**](/Lessons/2_Reads_to_Count_matrix.md): Learn how to convert raw scRNA-seq sequence reads into a count matrix with a simple step-by-step process. This matrix is essential for analyzing gene expression patterns, cell surface protein expression and TCR repertoire profiling at the single-cell level, using the Seurat R package.
 
