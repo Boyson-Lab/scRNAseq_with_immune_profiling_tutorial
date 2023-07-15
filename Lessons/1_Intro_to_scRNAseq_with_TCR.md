@@ -42,6 +42,23 @@ The introduction of single-cell multi-omics approach (CITE-seq) has presented us
 
 _**Image credit:** Baysoy, A., Bai, Z., Satija, R. et al. The technological landscape and applications of single-cell multi-omics. Nat Rev Mol Cell Biol (2023). https://doi.org/10.1038/s41580-023-00615-w_
 
+Among the different scRNAseq techniques, the droplet-based method, such as the one employed by the 10x Genomics Chromium system, has gained prominence. This method utilizes microfluidic technology to encapsulate individual cells and unique molecular barcodes into droplets, allowing parallel processing of thousands of cells. By combining reverse transcription and amplification within these droplets, 10x Genomics Chromium enables the generation of single-cell transcriptomes. This technique provides a comprehensive view of gene expression patterns across diverse cell populations.
+
+In addition to gene expression profiling, the 10x Genomics Chromium platform offers the unique advantage of enabling simultaneous analysis of cell surface protein expression and immune profiling. By incorporating specific antibody tags and VDJ sequence enrichment primers, this technology allows the detection of cell surface protein expression and TCR VDJ usage per cell. Consequently, researchers can gain insights into the molecular landscape of individual cells and understand their functional diversity. This integrated approach provides a powerful tool for exploring cellular composition, immune response, and heterogeneity within complex biological systems.
+
+<p align="center">
+<img src="../img/10x_GEX_CSP_VDJ.png" width="800">
+</p>
+
+_**Image credit:** 10x Genomics Website (https://www.10xgenomics.com/products/single-cell-immune-profiling)_
+
+
+Cell hashing is a technique used in single-cell RNA sequencing (scRNAseq) experiments to enable multiplexing and sample barcoding. It involves the labeling of individual cells from different samples with unique oligonucleotide tags, known as "hashing barcodes." These barcodes are added to the cells before pooling them together for library preparation and sequencing. By incorporating cell hashing, researchers can simultaneously process and analyze multiple samples within a single scRNAseq experiment. This multiplexing capability is particularly useful when comparing different experimental conditions, time points, or treatment groups. Cell hashing helps reduce batch effects and enables more efficient use of sequencing resources, while still allowing for the identification and characterization of individual cells from each sample in downstream analysis.
+
+<p align="center">
+<img src="../img/Cell_hashing.png" width="800">
+</p>
+
 ## Challenges of scRNA-seq analysis
 While scRNA-seq is a powerful and insightful method for the analysis of gene expression with single-cell resolution, there are many challenges and sources of variation that can make the analysis of the data complex or limited. Throughout the analysis of scRNA-seq data, we will try to account for or regress out variation due to the various sources of uninteresting variation in our data.
 **Overall, the following is recommended:**
@@ -54,20 +71,9 @@ While scRNA-seq is a powerful and insightful method for the analysis of gene exp
 	- Prepare libraries at same time or alternate sample groups to avoid batch confounding
 	- Do not confound sample groups by sex, age, or batch
 
-## Let's analyze a publicly available scRNA-seq dataset
-To understand and perform scRNA-seq data analysis, let's use a publicly available dataset with a specific research goal. Please click this [link](https://rupress.org/jem/article/220/1/e20220503/213546/WNT-signaling-in-the-tumor-microenvironment) to go to the journal webpage.
-
-Alternatively, you can access the main text along with the supplemental data (IMPORTANT!!) by clicking [here](https://github.com/SomenMistri/intro_to_scRNA-seq/blob/main/pdf/Article_WNT_signaling_Pancreatic_cancer.pdf).
-
-The human scRNA-seq datasets (count matrices prepared from raw FASTQ data) utilized by the authors are available [here](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE155698),
-while the mouse scRNA-seq datasets are available [here](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM6127792).
-
-Please note that, for this course, we will focus on human scRNA-seq datasets only.
-
-## Research question and study design
-Please go to the PowerPoint [slide](https://github.com/SomenMistri/intro_to_scRNA-seq/blob/main/Slides/Study_design.pptx) to discuss the background and specific research question(s).
-
-In order to decipher the role of WNT signaling in the tumor microenvironment (TME)of Pancreatic ductal adenocarcinoma (PDAC), this research group performed scRNA-Seq of pancreatic tumor cells and PBMCs originating from human and mouse sources.
+## Let's analyze a scRNA-seq dataset
+To understand and perform scRNA-seq data analysis, let's use a dataset that was generated in a past experiment of Boyson lab.
+Please go to the PowerPoint [slide](https://github.com/SomenMistri/intro_to_scRNA-seq/blob/main/Slides/Study_design.pptx) to discuss the background, specific research question(s) and experiment design.
 
 <p align="center">
 <img src="../img/Study_design_PDAC.png" width="600">
