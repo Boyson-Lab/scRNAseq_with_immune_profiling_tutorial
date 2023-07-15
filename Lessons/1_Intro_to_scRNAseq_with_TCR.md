@@ -82,7 +82,7 @@ Depending on the library preparation method used, the RNA sequences (also referr
 The 10X Genomics chromium system performs a single-cell droplet-based encapsulation using a gel bead-in-emulsion (GEM) approach. In the instrument, barcoded gel beads are mixed with cells, enzymes, and partitioning oil forming numerous GEMs. Each GEM acts as a micro-reaction droplet where the gel beads dissolve, and RNA transcripts from each cell get barcoded. The barcoded fragments are pooled, and sequencer–compatible libraries are created. 
 
  <p align="center">
-<img src="../img/How_scRNseq_works_GEMs.png" width="900">
+<img src="../img/How_scRNseq_works_GEMs.pdf" width="900">
 </p>
 
 _**Image credit:** adapted from 10x Genomics brochure_
