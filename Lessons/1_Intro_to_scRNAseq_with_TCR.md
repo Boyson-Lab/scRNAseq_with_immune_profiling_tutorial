@@ -1,6 +1,6 @@
 # Introduction to single-cell RNA sequencing
 
-## Why scRNA-seq?
+## Why scRNA-seq??
 
 Across human/mouse tissues, there is an incredible diversity of cell types, states, and interactions. To better understand these tissues and the cell types present, single-cell RNA-seq (scRNA-seq) offers a glimpse into what genes are being expressed at the level of individual cells.
 
