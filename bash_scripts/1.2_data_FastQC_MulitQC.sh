@@ -43,7 +43,6 @@ echo -n "Symlinks created in: "; pwd
 # To include FastQC and MultiQC, you can install them within the Conda environment. New packages can be added to the same enviroment later using the same code: conda install -c bioconda fastqc multiqc 
 # To list all the packages in a environment, please use: conda list 
 # To exit an environment after installation or use: conda deactivate 
-# For more detailed instructions, you can refer to Conda’s documentation here and for installing FastQC and MultiQC, the Bioconda channel here.
 #############################
 
 # Activate Conda environment
