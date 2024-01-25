@@ -33,6 +33,24 @@ Following data download, a quality control step is conducted using FastQC and Mu
 
 For detailed commands used for FastQC and MultiQC Analysis, refer to the bash script [1.2_data_FastQC_MulitQC.sh](/bash_scripts/1.2_data_FastQC_MulitQC.sh).
 
+For this script to work, you will need to create a conda environment for the first them only. Creating a Conda environment is essential for managing dependencies and isolating specific toolsets within projects. It ensures reproducibility by encapsulating packages separately.
+
+For quick command line installation of Miniconda VACC folder, follow the instructions of this website: https://docs.conda.io/projects/miniconda/en/latest/index.html#quick-command-line-install
+
+After installing Miniconda, run the following lines one after another in terminal to create a conda environment with FastQC and MultiQC in it. In future, other packages can be added to the same conda environment.
+
+```bash
+# To create a Conda environment use the following code. Choose your preferred environment name. Here I am using "scRNA-seq" as an example.
+conda create --name scRNA-seq
+# Once the environment is created, activate it: 
+conda activate scRNA-seq 
+# To include FastQC and MultiQC, you can install them within the Conda environment. New packages can be added to the same enviroment later using the same code: 
+conda install -c bioconda fastqc multiqc 
+# To list all the packages in a environment, please use: 
+conda list 
+# To exit an environment after installation or use: 
+conda deactivate 
+```
 
 ## 3. Alignment and Count Matrix Generation
 

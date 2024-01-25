@@ -20,10 +20,8 @@
 
 echo -n "scRNA-Seq QC Pipeline beginning at: "; date
 
-###################################
 echo -n "scRNA-Seq cellranger Pipeline beginning at: "; date
 
-###################################
 ### Data Gathering ###
 # Replace the generic path to the analysis folder
 cd /path/to/analysis/folder/   # Update to your analysis folder
@@ -34,16 +32,6 @@ echo "Symlinking Raw Data"
 # Create symbolic links for the raw data
 ln -s /path/to/original/data/*.fastq.gz ./   # Update to the original data path
 echo -n "Symlinks created in: "; pwd
-
-###########DO NOT RUN in SBATCH ##################
-# Create a Conda environment (For the first time only). Creating a Conda environment is essential for managing dependencies and isolating specific toolsets within projects. It ensures reproducibility by encapsulating packages separately.
-# To create a Conda environment use the following code: conda create --name myenv
-# Replace myenv with your preferred environment name such as "scRNA-seq"
-# Once the environment is created, activate it: conda activate scRNA-seq 
-# To include FastQC and MultiQC, you can install them within the Conda environment. New packages can be added to the same enviroment later using the same code: conda install -c bioconda fastqc multiqc 
-# To list all the packages in a environment, please use: conda list 
-# To exit an environment after installation or use: conda deactivate 
-#############################
 
 # Activate Conda environment
 source /path/to/miniconda3/etc/profile.d/conda.sh   # Update Miniconda path
