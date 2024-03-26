@@ -6,7 +6,7 @@ There are five R notebooks with distinct final output:
 1. 9.1_clonotype_abundance_list.Rmd
 2. 9.2_CDR3γ_or_CDR3δ_amino_aa_length_distribution.Rmd
 3. 9.3_clonotype_top100_bubbleplot.Rmd
-4. 9.4_clonotype_abundance_dotplot.Rmd
+4. 9.4_clonotype_featureplot.Rmd.Rmd
 5. 9.5_clonotype_diversity_scRepertoire.Rmd
 
 ## R Notebook: 9.1_clonotype_abundance_list: 
@@ -34,10 +34,23 @@ Click [here](/R_notebooks/9.3_clonotype_top100_bubbleplot.Rmd) to access the R n
 </div>
 </p>
 
-## R Notebook: 9.4_clonotype_abundance_dotplot:
+## R Notebook: 9.4_clonotype_featureplot:
 
-Work in progress
+Click [here](/R_notebooks/9.4_clonotype_featureplot.Rmd) to access the R notebook. This script can highlight the location of selected clonotypes (both γ and  δ chain together) in seurat cluster featureplots.
+
+<p align="center">
+<img src="../figs/9_clonotype_featureplot.png" alt="9_clonotype_featureplot" width="800"/>
+</p>
 
 ## R Notebook: 9.5_clonotype_diversity_scRepertoire:
 
-Work in progress
+Click [here](/R_notebooks/9.5_clonotype_diversity_scRepertoire.Rmd) to access the R notebook. 
+
+This notebook harnesses the scRepertoire package to compute clonotype diversity indexes, Morisita overlap indexes, and visualize essential factors in single-cell immune repertoire analysis. While predominantly using scRepertoire for calculations, it deviates by utilizing the package's output values to generate graphs in GraphPad Prism, enhancing flexibility and customization in data visualization and interpretation beyond R's capabilities.
+
+<p align="center">
+<img src="../figs/9_Repertoire_Diversity_Inv_Simpson.png" alt="9_Repertoire_Diversity_Inv_Simpson" width="800"/>
+</p>
+<p align="center">
+<img src="../figs/9_B6vsSAP_clonal_overlay.png" alt="9_B6vsSAP_clonal_overlay" width="900"/>
+</p>
