@@ -16,14 +16,12 @@
 #Then rename the file as raw_data.txt
 
 #using cd navigate to the parent folder where "barcodes.tsv.gz" and "raw_data.txt" files are located
-mkdir "raw_data"
 mkdir "output_folder"
 #First, I want to keep only productive "TRUE" rows
 #in awk "==" means equal to and "!=" means not equal to
 #The following awk code will go to column 12 (productive) and print all lines that says "TRUE" in that column
 awk '$12 == "TRUE" { print $0}' raw_data.txt > data_productive.txt
 #now move the original data to a folder for future reference
-mv raw_data.txt raw_data
 
 ########### STEP 2 ##################
 #####Separate TRGV and TRD containing rows######
@@ -107,7 +105,7 @@ rm ${prefix}_contig_sort.txt
 mv ${prefix}.txt Barcode_seperated_TRGV_raw
 done
 #now remove column 2 and 3 that has max contig id and row number
-cut -d$'\t' -f1-2,5-22  TRGV_processed.txt > TRGV_processed_delete.txt
+cut -d$'\t' -f1-2,5-22-  TRGV_processed.txt > TRGV_processed_delete.txt
 #add header column
 awk 'BEGIN {print "contig_freq_g\tcontig_type_g\tbarcode\tis_cell_g\tcontig_id_g\thigh_confidence_g\tlength_g\tchain_g\tv_gene_g\td_gene_g\tj_gene_g\tc_gene_g\tfull_length_g\tproductive_g\tcdr3_g\tcdr3_nt_g\treads_g\tumis_g\traw_clonotype_id_g\traw_consensus_id_g"} {print}' TRGV_processed_delete.txt > TRGV_processed_header.txt
 #remove intermediate files
@@ -155,7 +153,7 @@ rm ${prefix}_contig_sort.txt
 mv ${prefix}.txt Barcode_seperated_TRDV_raw
 done
 #now remove column 2 and 3 that has max contig id and row number
-cut -d$'\t' -f1-2,5-22  TRDV_processed.txt > TRDV_processed_delete.txt
+cut -d$'\t' -f1-2,5-22-  TRDV_processed.txt > TRDV_processed_delete.txt
 #add header column
 awk 'BEGIN {print "contig_freq_d\tcontig_type_d\tbarcode\tis_cell_d\tcontig_id_d\thigh_confidence_d\tlength_d\tchain_d\tv_gene_d\td_gene_d\tj_gene_d\tc_gene_d\tfull_length_d\tproductive_d\tcdr3_d\tcdr3_nt_d\treads_d\tumis_d\traw_clonotype_id_d\traw_consensus_id_d"} {print}' TRDV_processed_delete.txt > TRDV_processed_header.txt
 #reorder columns to bring barcode column to first position
@@ -188,9 +186,17 @@ prefix=`basename $f .txt`
 awk ' BEGIN { FS = "\t"; OFS = "\t" } {if (NR==FNR) {a[$1]=$0; next} {print $1 "\t" a[$1]}}' ${prefix}.txt barcodes_header.txt > ${prefix}_barcode_matched.txt
 
 #remove second column and save the output to "barcode_matched_with_gex" folder
-cut -d$'\t' -f1,3-21  ${prefix}_barcode_matched.txt > ./barcode_matched_with_gex/${prefix}_barcode_matched_final.txt
+cut -d$'\t' -f1,3-21-  ${prefix}_barcode_matched.txt > ./barcode_matched_with_gex/${prefix}_barcode_matched_final.txt
 rm ${prefix}_barcode_matched.txt
 done
 
+# Now remove intermediate files and folders. If needed for troubleshooting, delete the following commands
+cd .
+rm -r data_productive
+rm -r Separated_TRGV_TRDV
+rm -r Barcode_seperated_TRGV
+rm -r Barcode_seperated_TRDV
+
+#Go to /output_folder/barcode_matched_with_gex/ 
 #Use excel to join the two final files side by side and replace "blank" field to NA
 #further editing will take place in excel  
